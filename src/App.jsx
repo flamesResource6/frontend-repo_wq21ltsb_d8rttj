@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Filters from './components/Filters'
 import ListingCard from './components/ListingCard'
+import SavedSearchForm from './components/SavedSearchForm'
 
 function App() {
   const [items, setItems] = useState([])
@@ -37,6 +38,8 @@ function App() {
 
       <main className="max-w-6xl mx-auto px-4 py-6 space-y-4">
         <Filters onChange={setParams} />
+
+        <SavedSearchForm onCreated={() => {}} />
 
         {loading ? (
           <div className="py-20 text-center text-slate-500">Loading listings...</div>
